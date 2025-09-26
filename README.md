@@ -2,13 +2,15 @@
 
 A simple, single-page web application to display real-time air quality and environmental data from a specific PurpleAir sensor. 
 
+![Dashboard Screenshot](screenshot.png)
+
 ## Description
 
 This project provides a user-friendly interface to monitor data from any public PurpleAir sensor. It fetches a few fields and applies Lance Wallace's environmental correction formulas to provide more accurate estimations of ambient temperature and humidity. The data is color-coded to provide a quick visual assessment of air quality and data freshness.
 
 ### Features
 
-* Real-time Data: Fetches and displays the latest sensor readings.
+* Data: Fetches and displays the latest sensor readings when the page is loaded. 
 * Specific Sensor Tracking: Easily configurable to monitor any PurpleAir sensor by its index.
 * Corrected Environmental Data: Applies Lance Wallace's correction formulas for more accurate temperature and humidity readings.
 * Dynamic Color Coding:
@@ -25,7 +27,7 @@ This project provides a user-friendly interface to monitor data from any public 
 1. Edit Configuration: Open the `purpleair_monitor.html` file in a text editor and locate the configuration section within the `<script>` tag at the bottom.
 1. Set Your API Key: Replace `'YOUR_API_KEY_HERE'` with your own PurpleAir "Read" API key. You can request one from the PurpleAir website.
 1. Set Sensor Index: Replace the example `'SENSOR_INDEX'` value with the index of the sensor you wish to monitor. You can find the index by clicking a sensor on the PurpleAir map and looking at the number in the URL.
-1. Open in Browser: Save your changes and open the `purpleair_monitor.html` file in any modern web browser. The data will load automatically.
+1. Open in Browser: Save your changes and open the `purpleair_monitor.html` file in any modern web browser. Data is not automatically refreshed. Please refresh the page to load new data. 
 
 
 ## Credits
