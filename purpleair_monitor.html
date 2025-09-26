@@ -41,7 +41,7 @@
         <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
             <div class="text-center mb-8">
                 <h1 class="text-3xl md:text-4xl font-bold text-indigo-600">PurpleAir Sensor Monitor</h1>
-                <p class="text-gray-500 mt-2">Displaying real-time air quality data from a pre-configured sensor.</p>
+                <p class="text-gray-500 mt-2">Displaying air quality data from a pre-configured sensor.</p>
             </div>
 
             <!-- Input Form -->
@@ -147,10 +147,10 @@
         function updateUI(sensor) {
             // Apply Lance Wallace's correction methods
             // Temperature Correction: temp = 1.0227 * raw_temp_f - 9.3755
-            const correctedTemp = (1.0227 * sensor.temperature - 9.3755).toFixed(1); 
+            const correctedTemp = (1.0227 * sensor.temperature - 9.3755).toFixed(0); 
 
             // Humidity Correction: 1.4498 * raw_relative_humidity + 7.022
-            const correctedHumidity = (1.4498 * sensor.humidity + 7.022).toFixed(1);
+            const correctedHumidity = (1.4498 * sensor.humidity + 7.022).toFixed(0);
 
             temperatureEl.textContent = `${correctedTemp}°F`;
             updateGradientColor(temperatureEl, correctedTemp, 'temperature');
